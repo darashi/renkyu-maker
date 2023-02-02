@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
     "@holiday-jp/holiday_jp": "^2.4.0",
-    "astro": "^2.0.5",
+    "astro": "^2.0.6",
     "daisyui": "^2.50.0",
     "date-fns": "^2.29.3",
     "tailwindcss": "^3.2.4"
