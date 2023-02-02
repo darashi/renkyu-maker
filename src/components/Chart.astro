@@ -1,0 +1,11 @@
+---
+const { renkyu } = Astro.props;
+const char = "♥";
+---
+
+<div class="text-center text-xl">
+  <span class="text-primary">{char.repeat(renkyu.prevHolidays.length)}</span
+  ><span class="text-primary-focus"
+    >{char.repeat(renkyu.daysOffToBeTaken.length)}</span
+  ><span class="text-primary">{char.repeat(renkyu.nextHolidays.length)}</span>
+</div>

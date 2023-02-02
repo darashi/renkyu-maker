@@ -1,0 +1,12 @@
+---
+import format from "date-fns/format/index.js";
+import ja from "date-fns/locale/ja/index.js";
+
+export interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<span>{format(date, "M/d(E)", { locale: ja })}</span>

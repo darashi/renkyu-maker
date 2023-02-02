@@ -1,15 +1,39 @@
 ---
+import RenkyuCard from "../components/RenkyuCard.astro";
+import Footer from "../components/Footer.astro";
+import { getYear } from "date-fns";
+
+const year = getYear(new Date());
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="ja" data-theme="retro">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>連休メーカー</title>
+    <meta
+      name="description"
+      content="連休の谷間を見つけて、連休づくりのお手伝いをします。"
+    />
+  </head>
+  <body>
+    <div class="navbar bg-primary text-primary-content sticky top-0 z-30">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl">連休メーカー</a>
+      </div>
+    </div>
+
+    <div class="container w-96 mx-auto text-sm text-center my-5">
+      連休の谷間、見つけておきました!!
+    </div>
+
+    <div class="container w-96 mx-auto">
+      <RenkyuCard year={year} />
+      <RenkyuCard year={year + 1} />
+    </div>
+
+    <Footer />
+  </body>
 </html>
