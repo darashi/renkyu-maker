@@ -1,5 +1,5 @@
 ---
-import RenkyuCard from "../components/RenkyuCard.astro";
+import RenkyuCards from "../components/RenkyuCards";
 import Footer from "../components/Footer.astro";
 import { getYear } from "date-fns";
 
@@ -35,8 +35,8 @@ const year = getYear(new Date());
     </div>
 
     <div class="container w-96 mx-auto">
-      <RenkyuCard year={year} />
-      <RenkyuCard year={year + 1} />
+      <RenkyuCards year={year} client:load />
+      <RenkyuCards year={year + 1} client:load />
     </div>
 
     <Footer />

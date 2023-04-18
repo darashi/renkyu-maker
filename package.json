@@ -11,11 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^2.1.1",
     "@astrojs/tailwind": "^3.1.1",
     "@holiday-jp/holiday_jp": "^2.4.0",
     "astro": "^2.3.0",
     "daisyui": "^2.51.5",
     "date-fns": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.1"
   }
 }

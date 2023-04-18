@@ -1,10 +1,11 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 export default defineConfig({
   site: "https://darashi.github.io",
   base: "/renkyu-maker",
 
-  integrations: [tailwind()],
+  integrations: [tailwind(), react()],
 });
