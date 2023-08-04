@@ -7,7 +7,7 @@ type Props = {
   year: number;
 };
 
-export default function RenkyCards({ year }: Props) {
+export default function RenkyuCards({ year }: Props) {
   const renkyus = Renkyu.forYear(year);
   renkyus.sort((a, b) => a.numOffDaysToBeTaken - b.numOffDaysToBeTaken);
   const [currentDate, setCurrentDate] = useState(new Date());
