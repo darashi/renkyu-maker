@@ -35,8 +35,8 @@ const year = getYear(new Date());
     </div>
 
     <div class="container w-96 mx-auto">
-      <RenkyuCards year={year} client:load />
-      <RenkyuCards year={year + 1} client:load />
+      <RenkyuCards client:load year={year} client:load />
+      <RenkyuCards client:load year={year + 1} client:load />
     </div>
 
     <Footer />
