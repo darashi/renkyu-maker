@@ -18,13 +18,13 @@ function Hearts({ num }: { num: number }) {
 export default function Chart({ renkyu }: Props) {
   return (
     <div className="text-center text-xl">
-      <span className="text-primary">
+      <span className="text-heart">
         <Hearts num={renkyu.prevHolidays.length} />
       </span>
-      <span className="text-primary-focus">
+      <span className="text-heart-dark">
         <Hearts num={renkyu.daysOffToBeTaken.length} />
       </span>
-      <span className="text-primary">
+      <span className="text-heart">
         <Hearts num={renkyu.nextHolidays.length} />
       </span>
     </div>
