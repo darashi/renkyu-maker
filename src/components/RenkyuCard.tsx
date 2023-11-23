@@ -4,11 +4,11 @@ import DaySpan from "./DaySpan";
 
 type Props = {
   renkyu: Renkyu;
-  currentDate: Date;
+  currentDate: Date | null;
 };
 
 export default function RenkyuCard({ renkyu, currentDate }: Props) {
-  const past = currentDate > renkyu.to;
+  const past = currentDate && currentDate > renkyu.to;
   return (
     <div
       className={

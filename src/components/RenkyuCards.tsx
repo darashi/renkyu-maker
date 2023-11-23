@@ -10,12 +10,13 @@ type Props = {
 export default function RenkyuCards({ year }: Props) {
   const renkyus = Renkyu.forYear(year);
   renkyus.sort((a, b) => a.numOffDaysToBeTaken - b.numOffDaysToBeTaken);
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState<Date | null>(null);
   useEffect(() => {
     const timer = setInterval(
       () => setCurrentDate(startOfDay(new Date())),
       60 * 60 * 1000
     );
+    setCurrentDate(new Date());
     return () => clearInterval(timer);
   });
 
